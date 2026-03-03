@@ -12,10 +12,22 @@ body {
 }
 
 header {
-    background: #111;
+    background-image: url('https://wearespark.com/app/uploads/sites/2/2025/01/CInema-News-Main-1512x535-2024-Cinema-Admissions.png');
+    background-size: cover;
+    background-position: center 30%;
+    background-repeat: no-repeat;
     color: white;
     text-align: center;
     padding: 25px;
+    height: 150px;
+}
+h1{
+    font-size: 46px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+@media (max-width: 600px) {
+    
+    h1 { font-size: 36px; }
 }
 
 nav {
@@ -54,6 +66,7 @@ h2 {
 
 @media (min-width: 600px) {
     .movie-grid { grid-template-columns: repeat(3, 1fr); }
+    
 }
 
 @media (min-width: 900px) {
