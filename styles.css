@@ -136,6 +136,36 @@ tr:nth-child(even) {
     background: #f2f2f2;
 }
 
+/* FORM */
+form{
+    display: block;
+}
+form input,
+form select {
+    padding: 10px;
+    display: block;
+    width: 100%;
+    border-radius: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    font-family: 'Lato', Arial, sans-serif;
+    font-size: large;
+
+}
+
+form input[type="submit"] {
+    background: #111;
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+form input[type="submit"]:hover {
+    background: #333;
+}
+
+
 /* FOOTER */
 footer {
     background: #111;
