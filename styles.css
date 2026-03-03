@@ -34,6 +34,10 @@ nav {
     background: #222;
     text-align: center;
     padding: 12px;
+    position: sticky; /* start as fixed */
+    top: 0;
+    z-index: 999;
+    transition: top 0.3s ease; /* smooth hide/show */
 }
 
 nav a {
