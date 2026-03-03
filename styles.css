@@ -28,6 +28,7 @@ h1{
 @media (max-width: 600px) {
     
     h1 { font-size: 36px; }
+    nav { text-align:justify;}
 }
 
 nav {
@@ -43,7 +44,7 @@ nav {
 nav a {
     color: white;
     text-decoration: none;
-    margin: 0 15px;
+    margin: 0 15px 15px 15px;
     font-weight: bold;
 }
 
