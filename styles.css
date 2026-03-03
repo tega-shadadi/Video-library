@@ -49,9 +49,10 @@ nav a:hover {
 
 section {
     padding: 40px 20px;
-    max-width: 1200px;
-    margin: auto;
+    max-width: 1400px;
+    margin: auto 20px;
 }
+
 
 h2 {
     margin-bottom: 20px;
