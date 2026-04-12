@@ -192,3 +192,59 @@ footer {
     text-align: center;
     padding: 15px;
 }
+
+
+/* NAV BASE */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #111;
+    padding: 10px 15px;
+}
+
+/* HAMBURGER */
+.menu-toggle {
+    font-size: 26px;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+
+/* NAV LINKS */
+.nav-links {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        background: #111;
+        flex-direction: column;
+        display: none;
+        padding: 0;
+    }
+
+    .nav-links a {
+        padding: 10px;
+        border-top: 1px solid #222;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+}
