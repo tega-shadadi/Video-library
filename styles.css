@@ -44,7 +44,7 @@ nav {
 nav a {
     color: white;
     text-decoration: none;
-    margin: 0 15px 15px 15px;
+    margin: 0 15px;
     font-weight: bold;
 }
 
@@ -197,7 +197,7 @@ footer {
 /* NAV BASE */
 nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     background: #111;
     padding: 10px 15px;
@@ -228,6 +228,11 @@ nav {
         display: block;
     }
 
+    nav {
+    display: flex;
+    justify-content: start;
+    }
+
     .nav-links {
         position: absolute;
         top: 50px;
@@ -242,6 +247,8 @@ nav {
     .nav-links a {
         padding: 10px;
         border-top: 2px solid #494141;
+        
+
     }
 
     .nav-links.active {
