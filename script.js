@@ -40,7 +40,42 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
+document.addEventListener("DOMContentLoaded", () => {
 
+    const text = "🎬 SEMM Video Library";
+    let index = 0;
+    let isDeleting = false;
+
+    function typeEffect() {
+        const element = document.getElementById("typewriter");
+
+        if (!isDeleting) {
+            // Typing
+            element.innerHTML = text.substring(0, index + 1);
+            index++;
+
+            if (index === text.length) {
+                isDeleting = true;
+                setTimeout(typeEffect, 1500); // pause before deleting
+                return;
+            }
+
+        } else {
+            // Deleting
+            element.innerHTML = text.substring(0, index - 1);
+            index--;
+
+            if (index === 0) {
+                isDeleting = false;
+            }
+        }
+
+        setTimeout(typeEffect, isDeleting ? 40 : 80);
+    }
+
+    typeEffect();
+
+});
 
 const toggle = document.getElementById("menu-toggle");
 const navLinks = document.getElementById("nav-links");
