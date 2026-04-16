@@ -84,7 +84,7 @@ window.addEventListener("load", () => {
 
     setTimeout(() => {
         loader.style.display = "none";
-    }, 2000); // 2 seconds delay
+    }, 4000); // 2 seconds delay
 });
 
 const toggle = document.getElementById("menu-toggle");
