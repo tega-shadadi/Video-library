@@ -182,23 +182,25 @@
 <section id="membership">
     <h2>Register for Membership</h2>
 
-    <form>
+    <form id="membershipForm">
+
         <label>Full Name</label>
-        <input type="text" placeholder="example: John Doe" required>
+        <input type="text" id="fullname" placeholder="example: John Doe" required>
 
         <label>Email</label>
-        <input type="email" placeholder="example: john.doe@example.com" required>
+        <input type="email" id="email" placeholder="example: john.doe@example.com" required>
 
         <label>Phone Number</label>
-        <input type="tel" placeholder="example: +256 700 123 456">
+        <input type="tel" id="phone" placeholder="example: +256 700 123 456">
 
         <label>Membership Type</label>
-        <select title="Packages">
+        <select id="membershipType" title="Packages">
             <option>Standard - UGX 20,000/month</option>
             <option>Premium - UGX 35,000/month</option>
         </select>
 
         <input type="submit" value="Register">
+
     </form>
 </section>
 
