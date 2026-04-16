@@ -77,6 +77,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
+
+
+window.addEventListener("load", () => {
+    const loader = document.getElementById("loader");
+
+    setTimeout(() => {
+        loader.style.display = "none";
+    }, 2000); // 2 seconds delay
+});
+
 const toggle = document.getElementById("menu-toggle");
 const navLinks = document.getElementById("nav-links");
 
