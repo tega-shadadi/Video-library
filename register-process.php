@@ -60,7 +60,7 @@ if ($stmt = $con->prepare('SELECT id, password FROM accounts WHERE username = ?'
       $stmt->bind_param('ssss', $_POST['username'], $password, $_POST['email'], $registered);
       $stmt->execute();
       // Output success message
-      echo 'You have successfully registered! You can now login!';
+      header('Location: index.php');
     } else {
       // Something is wrong with the SQL statement, check to make sure the accounts table exists with all 3 fields
       echo 'Could not prepare statement!';
