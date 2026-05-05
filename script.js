@@ -46,34 +46,39 @@ document.addEventListener("DOMContentLoaded", () => {
     let index = 0;
     let isDeleting = false;
 
-    function typeEffect() {
-        const element = document.getElementById("typewriter");
+    function typeWriter(element, text, speed = 80, pause = 1500) {
+        let index = 0;
+        let isDeleting = false;
 
-        if (!isDeleting) {
-            // Typing
-            element.innerHTML = text.substring(0, index + 1);
-            index++;
+        function run() {
+            if (!element) return;
 
-            if (index === text.length) {
-                isDeleting = true;
-                setTimeout(typeEffect, 1500); // pause before deleting
-                return;
+            if (!isDeleting) {
+                element.textContent = text.substring(0, index + 1);
+                index++;
+
+                if (index === text.length) {
+                    isDeleting = true;
+                    setTimeout(run, pause);
+                    return;
+                }
+
+            } else {
+                element.textContent = text.substring(0, index - 1);
+                index--;
+
+                if (index === 0) {
+                    isDeleting = false;
+                }
             }
 
-        } else {
-            // Deleting
-            element.innerHTML = text.substring(0, index - 1);
-            index--;
-
-            if (index === 0) {
-                isDeleting = false;
-            }
+            setTimeout(run, isDeleting ? 40 : speed);
         }
 
-        setTimeout(typeEffect, isDeleting ? 40 : 80);
+        run();
     }
 
-    typeEffect();
+    typeWriter(document.querySelector(".typewriter"), "🎬 SEMM Video Library");
 
 });
 
